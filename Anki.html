@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anki Card Customizer</title>
+    <link rel="stylesheet" href="Anki.css">
+</head>
+
+<body>
+    <div id="ButtonDivAndSandboxDiv">
+        <div id="ButtonDiv">
+                <div>
+                    <p class="BorderTexts">Text</p>
+                    
+                    <label for="TextColorPicker">Text Color</label>
+                    <input type="color" name="TextColor" autocomplete="off" id="TextColorPicker">
+                    <button class="ApplyButtons">Apply</button>
+
+                    <label for="ShadowColorPicker">Shadow Color</label>
+                    <input type="color" name="ShadowColor" autocomplete="off" id="ShadowColorPicker" value="rgb(192,191,188)">
+                    <button class="ApplyButtons">Apply</button>
+                </div>
+                <div>
+                    <p class="BorderTexts">Background</p>
+                    <label for="BackgroundColorPicker">Background Color</label>
+                    <input type="color" name="BackgroundColor" autocomplete="off" id="BackgroundColorPicker" value="rgb(255,255,255)">
+                    <button class="ApplyButtons">Apply</button>
+                </div>
+                <div>
+                    <p class="BorderTexts">Padding</p>
+                    <label for="Padding">Padding</label>
+                    <input type="number" max="50" min="0" name="Padding" autocomplete="off" placeholder="8" id="Padding">
+                    <button class="ApplyButtons">Apply</button>
+                </div>
+                <div>
+                    <p class="BorderTexts">Text Align</p>
+                    <label for="Radio1">Left</label>
+                    <input type="radio" id="Radio1" name="TextAlign" value="Left">
+                    <label for="Radio2">Center</label>
+                    <input type="radio" id="Radio2" name="TextAlign" value="Center">
+                    <label for="Radio3">Right</label>
+                    <input type="radio" id="Radio3" name="TextAlign" value="Right">
+                    <button class="ApplyButtons">Apply</button>
+                </div>
+        </div>
+        <div id="SandboxDiv" class="SandboxDivHover SandboxDivHover2">
+            <p id="SandboxHoverText">You can click here to view it bigger.</p>
+            <p id="Question"></p>
+            <hr>
+            <p id="Answer"></p>
+        </div>
+    </div>
+    <div id="CodeDiv">
+        <p>Copy This Stylesheet Once You Done</p>
+        <hr>
+        <code>
+            .card {<br>
+                display:flex;<br>
+                flex-direction: column;
+            }
+        </code>
+    </div>
+
+    <div id="HowToUseDiv">
+        <h2>How To Apply Styles To Your Anki Cards</h2>
+        <button>Click here if you use anki software</button>
+        <button>Or here if you use mobile anki app</button>
+        <div id="ComputerTutorial">
+            <p>1: First open Anki in your computer</p>
+            <p>2: Then choose browse option</p>
+            <img src="Fotoğraflar/Computer1.png">
+            <p>3: After that choose the cards option</p>
+            <img src="Fotoğraflar/Computer2.png">
+            <p>4: Choose styling from the new window</p>
+            <img src="Fotoğraflar/Computer3.png">
+            <p>5: Remove everything in the red area and paste the stylesheet you copied</p>
+            <img src="Fotoğraflar/Computer4.png">
+            <p>6: Click save and you are good to go</p>
+        </div>
+        <div id="MobileTutorial"></div>
+    </div>
+
+    <div id="Overlay">
+
+    </div>
+    <script src="Anki.js"></script>
+</body>
+</html>

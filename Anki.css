@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Sekuya";
+    src: url(Sekuya-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, rgb(108, 108, 234),rgb(244, 96, 96));
+}
+
+#ButtonDiv hr {
+    border:5px solid white
+}
+
+#ButtonDivAndSandboxDiv {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    border: 4px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgb(201, 199, 199);
+    height: 50%;
+}
+
+#ButtonDiv {
+    border: 3px solid;
+    background-color: rgb(156, 91, 91);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 70%;
+}
+
+#ButtonDiv div {
+    border: 2px solid black;
+    height: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    height: fit-content;
+    padding: 5px;
+}
+
+#ButtonDiv div:hover {
+    box-shadow: 5px 5px black;
+}
+
+#ButtonDiv div button{
+    width: fit-content;
+}
+
+.SandboxDivHover {
+    border: 2px solid black;
+    padding: 3px;
+    background-color: white;
+    z-index: 3;
+    text-wrap: wrap;
+    width: 30%;
+}
+
+.SandboxDivHover2:hover {
+    #SandboxHoverText {
+        visibility: visible;
+    }
+    background: black;
+}
+
+#SandboxHoverText {
+    position: absolute;
+    visibility: hidden;
+    color:white;
+}
+
+#CodeDiv {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: gray;
+    p {
+        color: white;
+    }
+}
+
+code {
+    color: white;
+}
+
+.BorderTexts {
+    position: relative;
+    margin-top:-18px;
+    margin-left: 3px;
+    background-color: rgb(156, 91, 91);
+    width: fit-content;
+}
+
+input[type=radio]::after {
+    content: "hi";
+    background-color: red;
+    color: blue;
+}
+
+#Overlay {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    visibility: hidden;
+    z-index: 2;
+    opacity: 0.9;
+    margin: -8px;
+}
+
+#HowToUseDiv {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: gray;
+}
+
+#HowToUseDiv button {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+#HowToUseDiv div{
+    visibility: visible;
+}
+
+#ComputerTutorial img {
+    max-width: 50%;
+    width: auto;
+}
+
+@media (width < 600px) {
+    #ButtonDivAndSandboxDiv {
+        flex-direction: column;
+    }
+    #ButtonDiv {
+        max-width: 100%;
+        width: auto;
+    }
+}
+
