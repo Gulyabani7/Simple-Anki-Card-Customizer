@@ -10,7 +10,7 @@
 <body>
     <div id="ButtonDivAndSandboxDiv">
         <div id="ButtonDiv">
-                <div>
+                <div class="SmallButtonDiv">
                     <p class="BorderTexts">Text</p>
                     
                     <label for="TextColorPicker">Text Color</label>
@@ -20,27 +20,42 @@
                     <label for="ShadowColorPicker">Shadow Color</label>
                     <input type="color" name="ShadowColor" autocomplete="off" id="ShadowColorPicker" value="rgb(192,191,188)">
                     <button class="ApplyButtons">Apply</button>
+                    <button id="TextShadowDisableButton">Disable Text Shadow</button>
+
+                    <label for="QuestionChange">Example Question</label>
+                    <input type="text" name="QuestionChange" autocomplete="off" id="QuestionChange" placeholder="Type your own example questions here">
+                    <button id="QuestionChangeButton" class="ApplyButtons">Apply The Question</button>
+                    <label for="AnswerChange">Example Question</label>
+                    <input type="text" name="AnswerChange" autocomplete="off" id="AnswerChange" placeholder="Type your own answers here">
+                    <button id="AnswerChangeButton" class="ApplyButtons">Apply The Answer</button>
+
                 </div>
-                <div>
+                <div class="SmallButtonDiv">
                     <p class="BorderTexts">Background</p>
                     <label for="BackgroundColorPicker">Background Color</label>
                     <input type="color" name="BackgroundColor" autocomplete="off" id="BackgroundColorPicker" value="rgb(255,255,255)">
                     <button class="ApplyButtons">Apply</button>
                 </div>
-                <div>
+                <div class="SmallButtonDiv">
                     <p class="BorderTexts">Padding</p>
                     <label for="Padding">Padding</label>
                     <input type="number" max="50" min="0" name="Padding" autocomplete="off" placeholder="8" id="Padding">
                     <button class="ApplyButtons">Apply</button>
                 </div>
-                <div>
+                <div id="TextAlignDiv" class="SmallButtonDiv">
                     <p class="BorderTexts">Text Align</p>
-                    <label for="Radio1">Left</label>
-                    <input type="radio" id="Radio1" name="TextAlign" value="Left">
-                    <label for="Radio2">Center</label>
-                    <input type="radio" id="Radio2" name="TextAlign" value="Center">
-                    <label for="Radio3">Right</label>
-                    <input type="radio" id="Radio3" name="TextAlign" value="Right">
+                    <span>
+                        <label for="Radio1">Left</label>
+                        <input type="radio" id="Radio1" name="TextAlign" value="Left">
+                    </span>
+                    <span>
+                        <label for="Radio2">Center</label>
+                        <input type="radio" id="Radio2" name="TextAlign" value="Center">
+                    </span>
+                    <span id="TextAlignSpan">
+                        <label for="Radio3">Right</label>
+                        <input type="radio" id="Radio3" name="TextAlign" value="Right">
+                    </span>
                     <button class="ApplyButtons">Apply</button>
                 </div>
         </div>
@@ -64,8 +79,8 @@
 
     <div id="HowToUseDiv">
         <h2>How To Apply Styles To Your Anki Cards</h2>
-        <button>Click here if you use anki software</button>
-        <button>Or here if you use mobile anki app</button>
+        <button id="ComputerButton">Click here if you use anki software</button>
+        <button id="MobileButton">Or here if you use mobile anki app</button>
         <div id="ComputerTutorial">
             <p>1: First open Anki in your computer</p>
             <p>2: Then choose browse option</p>
